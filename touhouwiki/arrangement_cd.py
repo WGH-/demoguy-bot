@@ -16,6 +16,19 @@ from . import wikitext_utils
 from . import templates
 
 class ArrangementCD(object):
+    __slots__ = (
+        "title",
+        "titleen",
+        "titlejp",
+        "titlejprom",
+        "group",
+        "groupjp",
+        "groupCats",
+        "tracks",
+        "released",
+        "catalogno"
+    )
+
     def __init__(self):
         self.tracks = []
         self.groupCats = []
@@ -23,6 +36,16 @@ class ArrangementCD(object):
 ArrangeCD = ArrangementCD # legacy alias
 
 class Song(object):
+    __slots__ = (
+        "title",
+        "length",
+        "translated_title",
+        "arrangement",
+        "lyrics",
+        "vocals",
+        "sources"
+    )
+
     def __init__(self):
         self.translated_title = None
         self.arrangement = []
@@ -31,6 +54,11 @@ class Song(object):
         self.sources = []
 
 class SongSource(object):
+    __slots__ = (
+        "game",
+        "titles"
+    )
+
     def __init__(self):
         self.game = None
         self.titles = []
@@ -77,9 +105,10 @@ class ArrangementCDParser(object):
         cd = ArrangeCD()
 
         cd.group = sanitize_text(template["group"])
-        cd.group_jp = sanitize_text_jp(template["group"])
+        cd.groupjp = sanitize_text_jp(template["group"])
 
         cd.titlejp = sanitize_text(template.get("titlejp", "")) or None
+        cd.titlejprom = sanitize_text(template.get("titlejprom", "")) or None
         cd.titleen = sanitize_text(template.get("titleen", "")) or None
         
         cd.title = cd.titlejp or cd.titleen 
@@ -100,6 +129,7 @@ class ArrangementCDParser(object):
             cd.released = self.parse_date(sanitize_text(template['released']))
         except ValueError:
             self.logger.error("couldn't parse release date %r" % template.get("released"))
+            cd.released = None
         
         cd.catalogno = sanitize_text(template.get('catalogno')) or None
         
