@@ -86,7 +86,7 @@ class NavigationalTemplateUpdater(object):
             wikipedia.getSite(), u"Template:%s Albums" % group_cat)
 
         try:
-            pagecds.sort(key=lambda pagecd: (pagecd[1].released, pagecd[1].catalogno))
+            pagecds.sort(key=lambda pagecd: (pagecd[1].released or datetime.date(datetime.MINYEAR, 1, 1), pagecd[1].catalogno))
         except Exception as e:
             print >>sys.stderr, "Category:", group_cat
             traceback.print_exc()
@@ -130,11 +130,14 @@ class NavigationalTemplateUpdater(object):
 
             cur_idx = cur_year = 0
             for page, cd in pagecds:
-                if cd.released.year > cur_year:
-                    cur_year = cd.released.year
+                if cd.released is None or cd.released.year > cur_year:
+                    if cd.released is None:
+                        cur_year = None
+                    else:
+                        cur_year = cd.released.year
                     cur_idx += 1
                     l.append(u"\n")
-                    l.append(u"|group%d = %d\n" % (cur_idx, cur_year))
+                    l.append(u"|group%d = %s\n" % (cur_idx, unicode(cur_year or "Unknown")))
                     l.append(u"|list%d = %s" % (cur_idx, self.get_link(page, cd)))
                 else:
                     l.append(u" &bull; %s" % self.get_link(page, cd))
