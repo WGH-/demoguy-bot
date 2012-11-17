@@ -88,6 +88,7 @@ class NavigationalTemplateUpdater(object):
         try:
             pagecds.sort(key=lambda pagecd: (pagecd[1].released, pagecd[1].catalogno))
         except Exception as e:
+            print >>sys.stderr, "Category:", group_cat
             traceback.print_exc()
             return
         
