@@ -158,14 +158,18 @@ class NavigationalTemplateUpdater(object):
 
     def load_last_run(self):
         self.current_run = time.time()
+        self.last_run = datetime.datetime(datetime.MINYEAR, 1, 1)
+
         try:
             with open(self.LAST_RUN_FILE, 'r') as f:
-                self.last_run = datetime.datetime.utcfromtimestamp(
-                    float(f.readline())
-                )
-        except IOError:
+                l = f.readline()
+                if l: # not empty file
+                    self.last_run = datetime.datetime.utcfromtimestamp(
+                        float(l)
+                    )
+        except IOError as e:
             print >>sys.stderr, "couldn't load last run time"
-            self.last_run = datetime.datetime(0, 0, 0)
+            print >>sys.stderr, e
 
     def save_last_run(self):
         with open(self.LAST_RUN_FILE, 'w') as f:
