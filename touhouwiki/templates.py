@@ -47,6 +47,7 @@ templates = {
     "DS": u"ダブルスポイラー　～ 東方文花帖",
     "FW": u"妖精大戦争　～ 東方三月精",
     "TD": u"東方神霊廟　～ Ten Desires",
+    "HM": u"東方心綺楼　～ Hopeless Masquerade",
 
     # fan games:
 
