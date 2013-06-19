@@ -48,6 +48,7 @@ templates = {
     "FW": u"妖精大戦争　～ 東方三月精",
     "TD": u"東方神霊廟　～ Ten Desires",
     "HM": u"東方心綺楼　～ Hopeless Masquerade",
+    "DDC": u"東方輝針城　～ Double Dealing Character",
 
     # fan games:
 
