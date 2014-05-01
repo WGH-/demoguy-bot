@@ -1,0 +1,91 @@
+{{MusicArticle
+| titleen     =RETRO FUTURE GIRLS
+| group       =[[ShibayanRecords]]
+| groupCat    =ShibayanRecords
+| image       =STAL-1302.jpg
+| banner      =STAL-1302_banner.png
+| catalogno   =STAL-1302
+| tracks      =8
+| length      =59:24
+| released    =2013-12-30
+| convention  =Comiket 85
+| website     =[http://homepage3.nifty.com/shibayan/stal1302/ Link]
+| genre={{Genre|Vocal}}, {{Genre|Instrumental}}, {{Genre|Electronic}}
+| illustrator ={{lang|ja|いちはや}} (squeezecandyheaven)
+| designer    =
+| producer    =[[ShibayanRecords]]
+| arranger    =Shibayan (ShibayanRecords)
+: izna ([http://izmizm.net/ IZMIZM])
+: LAZ ([http://pastyle.web.fc2.com/ pastyle])
+: Linjin ([[CYTOKINE]])
+| masterer    =
+| lyricist    =milka
+: {{lang|ja|黒岩サトシ}} ([[君の美術館]])
+: Shibayan
+: cittan* ([[signum/ii]])
+: Linjin
+| vocalist    =milka
+: [[3L]] ([[NJK Record]])
+: nachi ([[NJK Record]]/[http://breathe.halfmoon.jp/twinkle/ twinkle*twinkle])
+: yana ([http://corleonis.info/ CorLeonis])
+: itori
+| other_staff =
+| description =It is a vocal and instrumental album featuring arranges from ''[[Embodiment of Scarlet Devil]]'', ''[[Perfect Cherry Blossom]]'', ''[[Imperishable Night]]'', ''[[Undefined Fantastic Object]]'', ''[[Ten Desires]]'' and ''[[Double Dealing Character]]''.
+| tracklist   =
+
+* {{Track|01|Super Fine Red|05:26}}
+** arrangement: izna
+** original title: {{lang|ja|上海紅茶館　～}} Chinese Tea
+** source: {{EoSD}}
+
+* {{Track|02|{{lang|ja|レディメイド・シティライフ}}|10:20|lyrics=Lyrics: レディメイド・シティライフ}}
+** ''Ready-Made City Life''
+** arrangement: Shibayan
+** lyrics: milka
+** vocals: milka
+** original title: {{lang|ja|少女綺想曲　～}} Dream Battle
+** source: {{IN}}
+
+* {{Track|03|{{lang|ja|サクラ　クラッシュ}}|05:25}}
+** ''Cherry Blossom Crash''
+** arrangement: LAZ
+** original title: {{lang|ja|死霊の夜桜}}
+** source: {{TD}}
+
+* {{Track|04|MyonMyonMyonMyonMyonMyonMyon!|09:46|lyrics=Lyrics: MyonMyonMyonMyonMyonMyonMyon!}}
+** arrangement: Shibayan
+** lyrics: {{lang|ja|黒岩サトシ}}
+** vocals: [[3L]]
+** original title: {{lang|ja|東方妖々夢　～}} Ancient Temple
+** source: {{PCB}}
+
+* {{Track|05|{{lang|ja|とびだせ！バンキッキ}}|07:46|lyrics=Lyrics: とびだせ！バンキッキ}}
+** ''Fly Out! [[Sekibanki|Bankikki]]''
+** arrangement: Shibayan
+** lyrics: Shibayan
+** vocals: nachi
+** original title: {{lang|ja|柳の下のデュラハン}}
+** source: {{DDC}}
+
+* {{Track|06|Spring Rouge|05:26}}
+** arrangement: izna
+** original title: {{lang|ja|春の湊に}}
+** source: {{UFO}}
+
+* {{Track|07|Desert Years|10:02|lyrics=Lyrics: Desert Years}}
+** arrangement: Shibayan
+** lyrics: cittan*
+** vocals: yana
+** original title: {{lang|ja|デザイアドライブ}}
+** source: {{TD}}
+
+* {{Track|08|Phoenix|05:08|lyrics=Lyrics: Phoenix}}
+** arrangement: Linjin
+** lyrics: Linjin
+** vocals: itori
+** original title: {{lang|ja|月まで届け、不死の煙}}
+** source: {{IN}}
+
+
+}}
+

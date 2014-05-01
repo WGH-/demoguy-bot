@@ -1,0 +1,75 @@
+{{MusicArticle
+| titleen     =White Lotus...
+| group       =[[Liz Triangle]]
+| groupCat    =Liz Triangle
+| image       =LTCD-0006.jpg
+| banner      =LTCD-0006 banner.jpg
+| released    =2009-10-11
+| convention  =Touhou Kouroumu 5
+| genre       ={{Genre|Vocal}}
+| tracks      =6
+| website     =[http://liz-tora.com/liz-tora/wl/ Link]
+| length      =32:44
+| arranger    =kaztora 
+| catalogno   =LTCD-0006
+| illustrator =lily-an 
+| designer    =
+| masterer    =
+| lyricist    =azuki 
+: lily-an 
+| vocalist    =lily-an 
+: akari
+| composer    =
+| producer    =
+| description =It is an ''[[Undefined Fantastic Object]]'' vocal arrangement album.
+| tracklist   =
+
+* {{Track|01|White Lotus...|06:25|lyrics=Lyrics: White Lotus...}}
+** arrangement: kaztora
+** lyrics: azuki
+** vocals: lily-an
+** original title: {{lang|ja|感情の摩天楼　～}} Cosmic Mind
+** source: {{UFO}}
+
+* {{Track|02|{{lang|ja|錨の羅針盤}}|05:27|lyrics=Lyrics: 錨の羅針盤}}
+** ''Anchor's Compass''
+** arrangement: kaztora
+** lyrics: azuki
+** vocals: lily-an
+** original title: {{lang|ja|キャプテン・ムラサ}}
+** original title: {{lang|ja|幽霊客船の時空を越えた旅}}
+** source: {{UFO}}
+
+* {{Track|03|{{lang|ja|宝塔の微笑む先に}}|05:43|lyrics=Lyrics: 宝塔の微笑む先に}}
+** ''Before the Pagoda Smiles''
+** arrangement: kaztora
+** lyrics: azuki
+** vocals: lily-an
+** original title: {{lang|ja|小さな小さな賢将}}
+** source: {{UFO}}
+
+* {{Track|04|{{lang|ja|神楽}}|04:38|lyrics=Lyrics: 神楽}}
+** ''[[wikipedia:kagura|Kagura]]''
+** arrangement: kaztora
+** lyrics: azuki
+** vocals: lily-an
+** original title: {{lang|ja|平安のエイリアン}}
+** source: {{UFO}}
+
+* {{Track|05|{{lang|ja|エンジョイ★なう！}}|04:19|lyrics=Lyrics: エンジョイ★なう}}
+** ''Enjoy★Now!''
+** arrangement: kaztora
+** lyrics: azuki
+** vocals: akari
+** original title: {{lang|ja|万年置き傘にご注意を}}
+** source: {{UFO}}
+
+* {{Track|06|White Lotus...{{lang|ja|～}}Piano|06:13|lyrics=Lyrics: White Lotus...～Piano}}
+** arrangement: kaztora
+** lyrics: azuki, lily-an
+** vocals: lily-an
+** original title: {{lang|ja|感情の摩天楼　～}} Cosmic Mind
+** source: {{UFO}}
+
+}}
+[[category:M3-24]]

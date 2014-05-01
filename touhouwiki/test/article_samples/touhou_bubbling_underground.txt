@@ -1,0 +1,165 @@
+{{MusicArticle
+| titlejp     =東方泡沫天獄
+| titlejprom  =Touhou Baburingu Andaaguraundo
+| titleen     =Touhou Bubbling Underground
+| group       =[[IOSYS]]
+| groupCat    =IOSYS
+| image       =IO-0149.jpg
+| released    =2008-12-29
+| tracks      =15
+| website     =[http://www.iosysos.com/cd/toho10/ Link]
+| length      =01:00:50
+| catalogno   =IO-0149
+| tracklist   =
+*01. '''{{lang|ja|[[Lyrics: おことわり|おことわり]]}}''' ''(02:32)''
+**''Declination''
+**narration: MOC, {{lang|ja|ジャーマネ}}
+**chorus: {{lang|ja|イザベル}}, {{lang|ja|神波千尋}}
+*02. '''{{lang|ja|[[Lyrics: 有頂天マゾヒスティック|有頂天マゾヒスティック]]}}''' ''(05:14)''
+**''Ecstasy Masochistic''
+**arrangement: ARM
+**lyrics: {{lang|ja|夕野ヨシミ}}
+**vocals: miko (Alternative ending)
+**voice: quim
+**original title: {{lang|ja|有頂天変　～}} Wonderful Heaven
+**source: {{SWR}}
+*03. '''{{lang|ja|[[Lyrics: 第１幕「幻想郷エクスタシーアンダーグラウンド」|第１幕「幻想郷エクスタシーアンダーグラウンド」]]}}''' ''(06:15)''
+**''Act 1: "Gensokyo Ecstasy Underground"''
+**arrangement: D.watt
+**lyrics: {{lang|ja|七条レタス}}
+**vocals & act:
+***miko (Alternative ending) as Tenko
+***{{lang|ja|イザベル}} as Marisa
+***{{lang|ja|神波千尋}} as Nitori
+**original title: {{lang|ja|幼心地の有頂天}}
+**source: {{SWR}}
+*04. '''{{lang|ja|[[Lyrics: サタデーナイトフィッシュガール|サタデーナイトフィッシュガール]]}}''' ''(06:24)''
+**''Saturday Night Fish Girl''
+**arrangement: {{lang|ja|柏木るざりん (電開製作所)}}
+**lyrics: {{lang|ja|夕野ヨシミ}}
+**vocals: 3L
+**original title: {{lang|ja|黒い海に紅く　～}} Legendary Fish
+**source: {{SWR}}
+*05. '''{{lang|ja|[[Lyrics: モリヤ一家のお料理教室|モリヤ一家のお料理教室]]}}''' ''(01:07)''
+**''The Moriya Household's Cooking Lesson''
+**arrangement: {{lang|ja|ぼいど}}, NYO (Silver Forest)
+**lyrics: {{lang|ja|ひくら}}
+**vocals & cast:
+***{{lang|ja|山本椛}} (monotone) as Sanae
+***{{lang|ja|なつみ}} (Silver Forest) as Kanako
+***Nano (Silver Forest) as Suwako
+**original title: {{lang|ja|神さびた古戦場　～}} Suwa Foughten Field
+**original title: {{lang|ja|ネイティブフェイス}}
+** source: {{MoF}}
+*06. '''{{lang|ja|[[Lyrics: 第２幕「そのDJは地底を震わせ」|第２幕「そのDJは地底を震わせ」]]}}''' ''(05:23)''
+**''Act 2: "That DJ Makes The Depths Of The Earth Quake"''
+**arrangement: RoughSketch (SHC/NOTEBOOK)
+**vocals & act:
+***{{lang|ja|あゆ}} as Satori
+***{{lang|ja|イザベル}} as Marisa
+***{{lang|ja|神波千尋}} as Nitori
+**original title: {{lang|ja|恋色マスタースパーク}}
+**source: {{IN}}
+**original title: {{lang|ja|芥川龍之介の河童　～}} Candid Friend
+**source: {{MoF}}
+**original title: {{lang|ja|ハートフェルトファンシー}}
+**source: {{SA}}
+*07. '''{{lang|ja|[[Lyrics: 知りすぎた少女さとり|知りすぎた少女さとり]]}}''' ''(03:43)''
+**''Satori, The Girl Who Knew Too Much''
+**arrangement: {{lang|ja|ぼいど}}
+**lyrics: GIGYO
+**vocals: {{lang|ja|あゆ}}
+**original title: {{lang|ja|少女さとり　～ 3rd eye}}
+**original title: {{lang|ja|ハートフェルトファンシー}}
+**source: {{SA}}
+*08. '''{{lang|ja|[[Lyrics: ハートフルネコロマンサー|ハートフルネコロマンサー]]}}''' ''(04:18)''
+**''Heartful Necromancer'' (note: with those kana, the title could also be "Heartful Neko Romancer")
+**arrangement: ARM
+**lyrics: {{lang|ja|夕野ヨシミ}}
+**vocals: 3L
+**original title: {{lang|ja|死体旅行　～}} Be of good cheer!
+**source: {{SA}}
+*09. '''{{lang|ja|[[Lyrics: モリヤ一家のガーデニング教室|モリヤ一家のガーデニング教室]]}}''' ''(01:07)''
+**''The Moriya Household's Gardening Lesson''
+**arrangement: {{lang|ja|ぼいど}}, NYO (Silver Forest)
+**lyrics: {{lang|ja|ひくら}}
+**vocals & cast:
+***{{lang|ja|山本椛}} (monotone) as Sanae
+***{{lang|ja|なつみ}} (Silver Forest) as Kanako
+***Nano (Silver Forest) as Suwako
+**original title: {{lang|ja|神さびた古戦場　～}} Suwa Foughten Field
+**original title: {{lang|ja|ネイティブフェイス}}
+**source: {{MoF}}
+*10. '''{{lang|ja|[[Lyrics: 第３幕「山林管理事務員コチヤの憂鬱」|第３幕「山林管理事務員コチヤの憂鬱」]]}}''' ''(03:59)''
+**''Act 3: "The Melancholy of Mountain and Forest Administration Officer Kochiya"''
+**arrangement: D.watt, {{lang|ja|溝口ゆうま}} (Innocent Key)
+**lyrics: {{lang|ja|七条レタス}}
+**vocals & act:
+***{{lang|ja|山本椛}} (monotone) as Sanae
+***{{lang|ja|イザベル}} as Marisa
+***{{lang|ja|神波千尋}} as Nitori
+**original title: {{lang|ja|信仰は儚き人間の為に}}
+**original title: {{lang|ja|少女が見た日本の原風景}}
+**source: {{MoF}}
+*11. '''{{lang|ja|[[Lyrics: あたしまりさ|あたしまりさ]]}}''' ''(03:44)''
+**''Me, Marisa''
+**arrangement: {{lang|ja|ぼいど}}
+**lyrics: {{lang|ja|ひくら}}
+**vocals & act: {{lang|ja|イザベル}} as Marisa
+**original title: {{lang|ja|恋色マスタースパーク}}
+**source: {{IN}}
+*12. '''[[Lyrics: 210LiNO DANMAKU Innovation|210LiNO DANMAKU Innovation]]''' ''(04:24)''
+**original title: {{lang|ja|芥川龍之介の河童　～}} Candid Friend
+**arrangement: D.watt
+**lyrics: {{lang|ja|七条レタス}}
+**vocals & act: {{lang|ja|神波千尋}} as Nitori
+**source: {{MoF}}
+*13. '''{{lang|ja|[[Lyrics: モリヤ一家の株式投資教室|モリヤ一家の株式投資教室]]}}''' ''(01:07)''
+**''The Moriya Household's Equity Investment Lesson''
+**arrangement: {{lang|ja|ぼいど}}, NYO (Silver Forest)
+**lyrics: {{lang|ja|ひくら}}
+**vocals & cast:
+***{{lang|ja|山本椛}} (monotone) as Sanae
+***{{lang|ja|なつみ}} (Silver Forest) as Kanako
+***Nano (Silver Forest) as Suwako
+**original title: {{lang|ja|神さびた古戦場　～}} Suwa Foughten Field
+**original title: {{lang|ja|ネイティブフェイス}}
+**source: {{MoF}}
+*14. '''{{lang|ja|[[Lyrics: 第４幕「月から降るアンセム」|第４幕「月から降るアンセム」]]}}''' ''(06:55)''
+**''Act 4: "The Anthem Descending From The Moon"''
+**arrangement: D.watt, yohine
+**lyrics: {{lang|ja|七条レタス}}
+**vocals: 3L
+**vocals & act:
+***miko (Alternative ending) as Tenko
+***{{lang|ja|あゆ}} as Satori
+***{{lang|ja|山本椛}} (monotone) as Marisa
+***{{lang|ja|イザベル}} as Marisa
+***{{lang|ja|神波千尋}} as Nitori
+***MOC as Yorihime
+***{{lang|ja|ジャーマネ}} as Toyohime
+**original title: {{lang|ja|妖怪宇宙旅行}}
+**source: {{SSiB|CD}}
+*15. '''{{lang|ja|[[Lyrics: 温泉賛歌|温泉賛歌]]}}''' ''(04:41)''
+**''Hot Spring Hymn''
+**arrangement: ARM
+**lyrics: {{lang|ja|ひくら}}
+**vocals: Dummy, nyannyannya (Team.{{lang|ja|ねこかん[猫]}})
+**original title: {{lang|ja|エネルギー黎明 ～}} Future Dream...
+**original title: {{lang|ja|地霊達の起床}}
+**source: {{SA}}
+
+== Notes ==
+* Track 8 is a parody of [[Wikipedia:Michael Jackson|Michael Jackson]]'s song "[[Wikipedia:Thriller (song)|Thriller]]". Considering the [[Wikipedia:Thriller (music video)|music video for that song]], it fits Orin very well.
+== Overview ==
+Concept album, containing drama tracks and an overarching plot featuring Marisa and Nitori staying out late in Gensoukyou, read as a type of fanfic in the style of a musical play by inhabitants of Gensoukyou.
+The "Touhou Bubble" mentioned throughout the album, is a parody of the [[Wikipedia:Japanese asset price bubble|Japanese Bubble]].
+According to [http://www.iosysos.com/20090123-toho10pv/ an entry of the IOSYS blog], this arranger has placed importance on song, performance and voice in order to express a narrative.
+| musictype   =Arrange CDs
+| convention  =Comiket 75
+| producer    =D.watt, {{lang|ja|ひくら}}
+| illustrator ={{lang|ja|俺と海}} ({{lang|ja|[http://flat-racing.sakura.ne.jp/oretoumi/hp/ ウモ屋]}})
+| designer    ={{lang|ja|風見ニノ}} ([http://evilforse.com/o_b/ {{lang|ja|オタクブックス}}])
+| masterer    ={{lang|ja|鯛の小骨}} (Azure&Sands)
+
+}}

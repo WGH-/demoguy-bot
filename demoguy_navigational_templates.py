@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import sys
 import os
@@ -22,7 +22,7 @@ import wikipedia
 import catlib
 import pagegenerators
 
-default_category_name = "Category:" + touhouwiki.arrangement_cd.ArrangementCDParser.category_name
+default_category_name = "Category:" + touhouwiki.arrangement_cd_parser.ArrangementCDParser.category_name
 
 def normalize_title(title):
     return wikipedia.Page(None, title).title()
@@ -91,6 +91,8 @@ class NavigationalTemplateUpdater(object):
             print >>sys.stderr, "Category:", group_cat
             traceback.print_exc()
             return
+
+        old_text = template.get(get_redirect=True)
         
         new_text = self.generate_template(
             pagecds,
@@ -188,7 +190,7 @@ def main():
     if args.source:
         args.source = normalize_title(args.source)
 
-    parser = touhouwiki.arrangement_cd.ArrangementCDParser()
+    parser = touhouwiki.arrangement_cd_parser.get_parser()
     
     updater = NavigationalTemplateUpdater(
         dry_run=args.dry_run, 

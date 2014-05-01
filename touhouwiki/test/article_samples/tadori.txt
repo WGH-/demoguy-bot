@@ -1,0 +1,78 @@
+{{MusicArticle
+| titlejp     =辿
+| titlejprom  =Tadori
+| titleen     =Follow
+| group       =[[Diao ye zong]]
+| groupCat    =Diao ye zong
+| released    =2012-12-30
+| tracks      =7
+| length      =00:40:43
+| convention  =Comiket 83
+| genre       ={{Genre|Vocal}}
+| catalogno   =RDWL-0010
+| website     =[http://www.rd-sounds.com/C83.html Link]
+| image       =Tadoris.jpg
+| banner      =Tadoriizanaismall.jpg
+| illustrator ={{lang|ja|はなだひょう}} ([http://nebulastall.lomo.jp/ {{lang|ja|ホシニセ}}])
+| arranger    =RD-Sounds
+| lyricist    =RD-Sounds
+| vocalist    = {{lang|ja|めらみぽっぷ}} ([http://cosmopolitan.pikka.jp/ こすもぽりたん])
+: Φ串Φ ([http://aburitorodon.blog89.fc2.com/ ちーむ炙りトロ丼blog])
+| description =It is a vocal and instrumental album featuring arrangements from ''[[Highly Responsive to Prayers]]'', ''[[Perfect Cherry Blossom]]'', ''[[Imperishable Night]]'', ''[[Phantasmagoria of Flower View]]'', ''[[Shoot the Bullet]]'', ''[[Mountain of Faith]]'', ''[[Dolls in Pseudo Paradise]]'' and ''[[Ghostly Field Club]]''.
+
+It forms a double album with [[誘|Izanai]].
+| tracklist   =
+
+*{{Track|1|とおいよびごえ|03:24}}
+** ''Distant Calling''
+**arrangement: RD-Sounds
+**original title: {{lang|ja|蓬莱伝説}}
+**source: {{DiPP}}
+
+*{{Track|2|{{lang|eng|Grate Escapers}}|06:04|lyrics=Lyrics: Grate Escapers}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|竹取飛翔　～}} Lunatic Princess
+**source: {{IN}}
+
+*{{Track|3|{{lang|eng|left behind}}|05:41|lyrics=Lyrics: left behind}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|月まで届け、不死の煙}}
+**source: {{IN}}
+
+*{{Track|4|{{lang|eng|name for the love}}|06:29|lyrics=Lyrics: name for the love}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|天狗が見ている　～}} Black Eyes
+**source: {{StB}}
+**original title: {{lang|ja|永遠の巫女}}
+**source: {{HRtP}}
+
+*{{Track|5|{{lang|eng|At least one word}}|05:52|lyrics=Lyrics: At least one word}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|信仰は儚き人間の為に}}
+**source: {{MoF}}
+
+*{{Track|6|{{lang|eng|she's purity}}|06:15|lyrics=Lyrics: she's purity}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|ポイズンボディ　～}} Forsaken Doll
+**source: {{PoFV}}
+
+*{{Track|7|{{lang|eng|The beautiful world}}|06:55|lyrics=Lyrics: The beautiful world}}
+**arrangement: RD-Sounds
+**lyrics: RD-Sounds 
+**vocals: {{lang|ja|めらみぽっぷ}}
+**original title: {{lang|ja|魔術師メリー}}
+**source: {{GFC}}
+**original title: {{lang|ja|ネクロファンタジア}}
+**source: {{PCB}}
+
+}}
