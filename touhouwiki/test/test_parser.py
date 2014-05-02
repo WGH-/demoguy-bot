@@ -48,7 +48,7 @@ class TestParserBase(object):
         self.assertEqual(myon.arrangement, [u"Shibayan"])
         self.assertEqual(myon.lyrics, [u"黒岩サトシ"])
         self.assertEqual(myon.vocals, [u"3L"])
-        #self.assertEqual(len(myon.sources), 1)
+        self.assertEqual(len(myon.sources), 1)
         src = myon.sources[0]
         self.assertIsInstance(src, arrangement_cd.SongSource)
         self.assertEqual(src.game, u"東方妖々夢 ～ Perfect Cherry Blossom")
@@ -85,7 +85,7 @@ class TestParserBase(object):
         self.assertEqual(song.arrangement, [u"RD-Sounds"])
         self.assertEqual(song.lyrics, [u"RD-Sounds"])
         self.assertEqual(song.vocals, [u"めらみぽっぷ"])
-        #self.assertEqual(len(song.sources), 2)
+        self.assertEqual(len(song.sources), 2)
         src = song.sources[0]
         self.assertIsInstance(src, arrangement_cd.SongSource)
         self.assertEqual(src.game, u"東方文花帖 ～ Shoot the Bullet")
@@ -98,6 +98,8 @@ class TestParserBase(object):
         parser = self._parser_class()
         text = self._load_file("article_samples/white_lotus.txt")
         result = parser.parse_page(text)
+
+        self.assertEqual(len(result.tracks[1].sources), 1)
 
         src = result.tracks[1].sources[0]
 

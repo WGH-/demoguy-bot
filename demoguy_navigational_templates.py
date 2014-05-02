@@ -1,5 +1,7 @@
 #!/usr/bin/env python2
 
+from __future__ import print_function
+
 import sys
 import os
 
@@ -10,52 +12,76 @@ import argparse
 import traceback
 import collections
 import itertools
+import tempfile
+import subprocess
 
 import touhouwiki.arrangement_cd
+import touhouwiki.arrangement_cd_parser
 import touhouwiki.wikitext_utils
 
-sys.path.append(os.path.join(
-    os.path.abspath(os.path.dirname(__file__)),
-    "pywikipedia",
-))
-import wikipedia
-import catlib
-import pagegenerators
+import interactive_diff
+
+import pywikibot
+import pywikibot.catlib
+import pywikibot.pagegenerators
 
 default_category_name = "Category:" + touhouwiki.arrangement_cd_parser.ArrangementCDParser.category_name
 
 def normalize_title(title):
-    return wikipedia.Page(None, title).title()
+    return pywikibot.Link(title).canonical_title()
 
 def get_pages(cat=None):
     if not cat:
         cat = default_category_name
     assert cat.startswith("Category:")
 
-    pages = catlib.Category(wikipedia.getSite(), cat).articles()
+    pages = pywikibot.catlib.Category(pywikibot.getSite(), cat).articles()
 
     # TODO filter out pages tha don't belong to `default_category_name'
     # if `cat' is set
     # TODO could be done better with special generators
 
-    return (page for page in pagegenerators.PreloadingGenerator(pages)
+    return (page for page in pywikibot.pagegenerators.PreloadingGenerator(pages)
             if page.namespace() == 0 # only main namespace
     )
 
-class NavigationalTemplateUpdater(object):
-    LAST_RUN_FILE = "/var/run/navtemplates_lastrun.tmp"
+def interactive_edit(article_name, old_text, new_text):
+    backup = (old_text, new_text)
 
-    def __init__(self, dry_run, force, cat):
-        self.dry_run = dry_run
+    while True:
+        print(article_name)
+        interactive_diff.diff(old_text, new_text)
+        print("eo - edit old")
+        print("en - edit new")
+        print("s  - save")
+        print("n  - next (do nothing)")
+        print("r  - reset")
+
+        x = raw_input("Action: ").strip()
+
+        if x in ("eo", "edit old"):
+            new_text = interactive_diff.run_diff_editor([old_text, new_text], ["old", "generated"])
+        elif x in ("en", "edit new"):
+            new_text = interactive_diff.run_diff_editor([new_text, old_text], ["generated", "old"])
+        elif x in ("s", "save"):
+            return new_text
+        elif x in ("r", "reset"):
+            old_text, new_text = backup
+        elif x in ("n", "next"):
+            return None
+        else:
+            print("unknown command")
+
+class NavigationalTemplateUpdater(object):
+    def __init__(self, force, cat):
         self.force = force
         self.cat = cat
 
-        self.load_last_run()
         self.group_cats = collections.defaultdict(list)
 
     def on_album(self, page, cd):
         """Extracts required data for later batch update"""
-        assert isinstance(page, wikipedia.Page)
+        assert isinstance(page, pywikibot.Page)
         assert isinstance(cd, touhouwiki.arrangement_cd.ArrangementCD)
         
         for group_cat in cd.groupCats:
@@ -63,10 +89,7 @@ class NavigationalTemplateUpdater(object):
             self.group_cats[group_cat].append((page, cd))
 
     def is_up_to_date(self, pagecds):
-        last_album_change = max(
-            page.editTime(datetime=True) for page, cd in pagecds)
-        
-        return self.last_run - last_album_change > datetime.timedelta(days=0.5) 
+        return False 
 
     def update_categories(self):
         for group_cat, pagecds in self.group_cats.iteritems():
@@ -82,27 +105,33 @@ class NavigationalTemplateUpdater(object):
             return
 
         group_cat = group_cat.replace("Category:", "")
-        template = wikipedia.Page(
-            wikipedia.getSite(), u"Template:%s Albums" % group_cat)
+        template = pywikibot.Page(
+            pywikibot.getSite(), u"Template:%s Albums" % group_cat)
 
         try:
             pagecds.sort(key=lambda pagecd: (pagecd[1].released or datetime.date(datetime.MINYEAR, 1, 1), pagecd[1].catalogno))
         except Exception as e:
-            print >>sys.stderr, "Category:", group_cat
+            print("Category:", group_cat, file=sys.stderr)
             traceback.print_exc()
             return
-
-        old_text = template.get(get_redirect=True)
+        try:
+            old_text = template.get(get_redirect=True)
+        except pywikibot.exceptions.NoPage:
+            old_text = u""
         
         new_text = self.generate_template(
             pagecds,
             template
         )
 
-        if self.dry_run:
-            print new_text
-        else:
-            template.put(new_text, u"updating", minorEdit=False) 
+        if new_text.strip() == old_text.strip():
+            print("Skipping not changed", template.title())
+            return
+
+        result = interactive_edit(template.title(), old_text, new_text)
+
+        if result is not None:
+            template.put(result, u"updating (semi-automatic mode)", minorEdit=False, botflag=False) 
 
     def generate_template(self, pagecds, old_template):
         l = []
@@ -112,10 +141,11 @@ class NavigationalTemplateUpdater(object):
                 old_dict = touhouwiki.wikitext_utils.find_template(old_template.get(get_redirect=True), "Navbox")
                 if old_dict is None:
                     old_dict = {}
-            except wikipedia.exceptions.NoPage:
+            except pywikibot.exceptions.NoPage:
                 old_dict = {}
             
             l.append(u"{{Navbox\n")
+            l.append(u"|type = music\n")
             l.append(u"|name = {{subst:PAGENAME}}\n")
 
             l.append(u"|title = %s\n" % 
@@ -124,6 +154,7 @@ class NavigationalTemplateUpdater(object):
             for k, v in old_dict.iteritems():
                 if (k == "name" or
                     k == "title" or
+                    k == "type" or 
                     k.startswith("group") or
                     k.startswith("list")):
                         continue
@@ -150,40 +181,24 @@ class NavigationalTemplateUpdater(object):
         l.append(u"[[Category:Arrange CDs navigational templates]]\n")
         l.append(u"</noinclude>");
 
-        return u"".join(l)
+        res = u"".join(l)
 
+        # replace subst:PAGENAME here to avoid cluttering the diff
+        res = res.replace(u"{{subst:PAGENAME}}", old_template.title(withNamespace=False))
+
+        return res
+        
     def get_link(self, page, cd):
         if page.title() == cd.title:
             return u"[[%s]]" % page.title()
         else:
             return u"[[%s | %s]]" % (page.title(), cd.title)
 
-    def load_last_run(self):
-        self.current_run = time.time()
-        self.last_run = datetime.datetime(datetime.MINYEAR, 1, 1)
-
-        try:
-            with open(self.LAST_RUN_FILE, 'r') as f:
-                l = f.readline()
-                if l: # not empty file
-                    self.last_run = datetime.datetime.utcfromtimestamp(
-                        float(l)
-                    )
-        except IOError as e:
-            print >>sys.stderr, "couldn't load last run time"
-            print >>sys.stderr, e
-
-    def save_last_run(self):
-        with open(self.LAST_RUN_FILE, 'w') as f:
-            print >>f, self.current_run
-    
-
 def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("source", nargs="?",
         help="Category to load pages from")
-    parser.add_argument("--dry", dest="dry_run", action="store_true")
     parser.add_argument("--force", dest="force", action="store_true")
     args = parser.parse_args()
 
@@ -193,27 +208,22 @@ def main():
     parser = touhouwiki.arrangement_cd_parser.get_parser()
     
     updater = NavigationalTemplateUpdater(
-        dry_run=args.dry_run, 
         force=args.force,
         cat=args.source)
 
     for page in get_pages(args.source):
         try:
-            print page.title()
+            print(page.title())
             cd = parser.parse_page(page.get())
         except Exception as exc:
-            print exc
+            print(exc)
         else:
             updater.on_album(page, cd)
 
     updater.update_categories()
-    
-    if not args.dry_run and not args.source:
-        updater.save_last_run()
-
 
 if __name__ == "__main__":
     try:
         main()
     finally:
-        wikipedia.stopme()
+        pywikibot.stopme()

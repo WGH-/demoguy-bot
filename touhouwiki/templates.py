@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 import os
+import io
 
 templates = {
     "lang": "{{{2}}}",
@@ -71,7 +72,7 @@ def _load_additional_templates():
             filename
         )
 
-        with open(filename, "r") as f:
-            templates[templname] = f.read().decode("UTF-8").strip()
+        with io.open(filename, "r", encoding="UTF-8") as f:
+            templates[templname] = f.read().strip()
 
 _load_additional_templates()

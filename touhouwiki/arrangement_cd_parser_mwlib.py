@@ -121,6 +121,11 @@ class MWLibParser(arrangement_cd_parser.ArrangementCDParser):
                             continue
                         self.parse_song_info(item, o)
 
+                # XXX hack
+                if o.sources:
+                    if not o.sources[-1].game and not o.sources[-1].titles:
+                        o.sources.pop()
+
                 yield o 
     
 
