@@ -50,6 +50,12 @@ templates = {
     "TD": "東方神霊廟　～ Ten Desires",
     "HM": "東方心綺楼　～ Hopeless Masquerade",
     "DDC": "東方輝針城　～ Double Dealing Character",
+    "ISC": "弾幕アマノジャク　～ Impossible Spell Card",
+
+    # not Touhou
+
+    "SG": "秋霜玉",
+    "KG": "稀翁玉",
 
     # fan games:
 
